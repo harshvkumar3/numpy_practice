@@ -1,0 +1,35 @@
+Index:
+------
+1. History of NumPy
+2. Introduction to NumPy
+
+HISTORY OF NUMPY
+=================
+-> NumPy was developed by studying existing module called "Numeric Library" (origin for development of NumPy module)
+-> The Numeric Library was developed by Jim Hungunian
+-> The Numeric Library was not able to solve complex mathematical calculations
+-> NumPy module developed by Travis Oliphant for solving complex mathematical calculations and array organization
+-> NumPy module was developed in the year 2005
+-> NumPy module developed in C and Python languages
+
+INTRODUCTION TO NUMPY:
+======================
+-> NumPy stands for "Numerical Python"
+-> The purpose of NumPy module is that: "To perform complex mathematical operations and array based computing"
+-> NumPy is one of the third party module/library and numpy module is not a predefined module in python language
+-> The NumPy is one of the third party modules and third party modules are available in GitHub
+-> To install third party modules like NumPy, Pandas, Matplotlib, etc, we must install a tool called "pip"
+-> "pip" is present in the location where Python software is installed (inside the folder called "Scripts")
+-> pip contains three things:
+	1. pip
+	2. pip3
+	3. pip314 (depending on python version)
+
+-> Syntax for installing any module:
+	pip install module_name (in windows command prompt)
+Example: pip install numpy 
+
+-> To use numpy as a part of our program, we must import numpy module
+-> A NumPy module is a collection of variables, functions and classes
+
+NOTE: To download any module, we need an internet connection, else we will get HTTPConnectionError
