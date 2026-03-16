@@ -1,0 +1,100 @@
+Index:
+-------
+1. Need of NumPy programming
+2. Python Traditional list Vs NumPy module
+3. Advantages of using NumPy
+
+NEED OF NUMPY PROGRAMMING:
+========================== 
+Q) How do we store numerical values in the form of matrix in python?
+-> By using List in list (Nested list)
+
+Q) How do you store list of homogeneous values/similar type of values in a single object with unique or duplicate?
+-> By using list (mutable) or tuple(immutable)
+
+Ex:
+lst = [10,20,30,40] 
+lst.reshape(2,2) -> AttributeError: 'list' object has no attribute 'reshape'
+
+How to store data?
+-> In Python: We can store data using datatypes/objects of pre-defined classes
+-> In NumPy: We can store data using object of "numpy.ndarray" class
+
+Q) What is ndarray?
+-> "ndarray" is one of the predefined class present in numpy module <class'numpy.ndarray'>
+-> An object of ndarray allows us to store the data in the form of:
+	1d -- Number of elements
+	2d -- Number of rows x No. of columns
+	3d -- No. of matrices x No. of rows x No. of columns
+ 	...
+
+Why need of NumPy module?
+-------------------------
+1. Reshaping of elements is not possible in list directly (AttributeError)
+2. Vector based operation is not possible (i.e. performing an operation on each element is not possible directly using list)
+3. For storing very large number of values, numpy is recommended
+4. List based applications are not effective in performance compared to ndarray because the values of list (elements) are present in different addresses in main memory 
+NOTE: The values of ndarray object are stored in clusters
+5. List object may have different values (elements) of different types (Heterogeneous values) 
+NOTE: ndarray object takes all types of elements as similar type whose type is "object"
+
+PYTHON TRADITIONAL LIST VS NUMPY MODULE:
+=========================================
+-> Similarities of python traditional list vs numpy module:
+1. An object of list class is used to store multiple values of same datatype or different datatypes and both types (unique + duplicates) in a single object
+2. In NumPy programming, the data is organized in the object of "numpy.ndarray" class which is one of the predefined class in numpy module. Hence, an object of ndarray can store same type or different type and both types (unique + duplicates) in a single object
+3. The objects of ndarray and list are mutable (changes can take place at the same memory address)
+
+-> Differences between Python Traditional list and ndarray object of NumPy module:
+1. An object of list contains both homogeneous and heterogeneous values whereas an object of ndarray of numpy can store only similar type of values (even if we store different values (datatypes), internally they are treated as similar type by treating all values of type "object")
+2. On the object of list, we cannot perform Vector based operations, whereas on the object of ndarray, we can perform vector based operations
+3. In large sampling of data, list based applications takes more memory space whereas ndarray object takes less memory space
+4. List based applications are not efficient because list object values/elements takes more time to extract or retrieve (they are available at different addresses in main memory) whereas numpy based applications are efficient because of ndarray object values takes less time to extract or retrieve (they are available at the same address/clusters)
+5. List object cannot perform complex mathematical operations whereas an object of ndarray can perform complex mathematical operations (like solving linear equations)
+
+ADVANTAGES OF USING NUMPY:
+==========================
+Need of NumPy:
+---------------
+-> With the evolution of data science, data analysis libraries like NumPy, Pandas, SciPy, Scikit, etc have seen a lot of growth. With a much easier syntax than other programming languages, python is the first choice language for data scientist
+-> NumPy provides a convenient and efficient way to handle the vast amount of data. NumPy is also very convenient with matrix operations and data reshaping. NumPy is fast which makes it reasonable to work with a large set of data
+
+The advantages of NumPy programming are:
+----------------------------------------
+-> With NumPy programming, we can deal with arrays such as 1-D, 2-D and multi dimensional arrays
+-> NumPy maintains minimal memory for large sets of data
+-> NumPy provides fastness in performing operations because internally its data is available at the same address/clusters
+-> NumPy performs array-oriented computing
+-> It efficiently implements the multidimensional arrays
+-> It performs scientific computations
+-> It is capable of performing the reshaping the data stored in multidimensional arrays
+-> NumPy provides many inbilt functions for various complex mathematical operations such as statistical, financial, trigonometric operations, etc
+
+NOTE: 
+-> Higher type of datatypes can be str, float, etc
+-> Supertype of all datatypes is "object"
+
+Ex1: 
+lst = [10, "RS", True, 25.34]
+arr = numpy.array(lst)
+print(arr, type(arr))
+Output: ['10' 'RS' 'True' '25.34'] <class 'numpy.ndarray'>
+#Here, higher type of datatypes is "str"
+
+Ex2: 
+lst = [10, "RS", True, 25.34]
+arr = numpy.array(lst, dtype="object")
+print(arr, type(arr))
+Output: [10 RS True 25.34] <class 'numpy.ndarray'>
+
+REMEMBER KEYNOTES:
+-> NumPy arrays are homogeneous
+-> Mixed types => automatic upcasting
+Order:
+	1. bool
+	2. int
+	3. float
+	4. complex
+	5. string
+	6. object
+-> Using dtype="object", allows heterogenous arrays. Each element behaves like a normal python object
