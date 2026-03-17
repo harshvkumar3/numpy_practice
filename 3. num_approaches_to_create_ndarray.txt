@@ -1,0 +1,123 @@
+Index:
+------
+1. Number of approaches to create an object of ndarray
+2. Datatypes in NumPy programming
+3. Approach 1: array() 
+4. Attributes of ndarray object
+5. Reshaping an ndarray object
+
+NUMBER OF APPROACHES TO CREATE AN OBJECT OF NDARRY:
+===================================================
+What is ndarray?
+----------------
+-> It is one of the predefined class in numpy module
+-> The purpose of ndarray class is that: "To store the data in the form of array and to perform complex mathematical operations"
+-> With ndarray, we can store the data in three types of arrays:
+	1. 1D array -  (Number of elements,)
+	2. 2D array - (Number of rows, Number of columns)
+	3. 3D array - (Number of matrices, Number of rows, Number of columns)
+	#This 3D can be generalised as ND array
+
+-> In NumPy programming, to create an object of ndarray class, we have several approaches. They are:
+	1. array()
+	2. arange()
+	3. zeros()
+	4. ones()
+	5. full()
+	6. linspace()
+	7. identity()
+	8. eye()
+	9. hstack()
+	10. vstack()
+	11. diag()
+-> We have "random" sub-module in NumPy module: numpy.random submodule
+	1. randint()
+	2. randn()
+	3. normal()
+	4. rand()
+	5. uniform()
+	6. choice()
+	7. shuffle()
+	8. permutation()
+
+DATATYPES IN NUMPY PROGRAMMING:
+===============================
+-> In NumPy programming, we have datatypes of C language
+-> In C language, int is a keyword
+-> Datatypes: 
+	1. int datatype: 
+		- int8
+		- int16
+		- int32
+		- int64
+	2. float datatype:
+		- float16
+		- float32
+		- float64
+	3. str datatype:
+		- U(max_length)	
+
+APPROACH 1: array():
+=====================
+-> This function is present in numpy module
+-> Purpose: This function is used for converting traditional python objects into ndarray object 
+
+	Syntax: varname = numpy.array(python_object, dtype)
+-> Here, varname is an object of <class 'numpy.ndarray'>
+-> "python_obj" represents any traditional python object such as int, float,...dict
+-> "dtype" represents any numpy datatype such as int8, int16, int32, int64, float16,..float64, etc (Internal datatypes of C language)
+
+ATTRIBUTES OF NDARRAY OBJECT:
+=============================
+	Syntax: ndarray_obj.attribute_name
+
+1. dtype: gives datatype of values of ndarray object
+
+Ex1:
+lst = ["Hello", 1, True]
+arr = numpy.array(lst)
+print(arr) -> ['Hello' '1' 'True'] (#converted to higher type)
+print(type(arr)) -> <class 'numpy.ndarray'>
+print(arr.dtype) -> <U21
+	  
+2. ndim: gives dimension of ndarray object
+
+Ex1: 
+arr = np.array(1)
+print(arr) -> 1
+print(arr.ndim) -> 0
+arr -> array(1) **
+
+3. shape: gives shape of ndarray object in the form of tuple
+-> 0d array: () #empty tuple **
+-> 1d array: (number of elements,)
+-> 2d array: (number of rows, number of columns)
+-> 3d array: (number of matrices, number of rows, number of columns)
+
+4. size: gives total number of elements in an ndarray object
+
+5. itemsize: the memory space occupied by every element of ndarray object
+
+RESHAPING AN NDARRAY OBJECT:
+=============================
+-> Two approaches:
+	1. By using shape attribute
+	2. By using reshape()
+
+1. By using shape attribute:
+----------------------------
+Syntax: 
+	1. ndarray_obj.shape = (values,) #for 1d array
+	2. ndarray_obj.shape = (num_rows,num_columns) #for 2d array
+	3. ndarray_obj.shape = (num_matrices, num_rows, num_cols) #for 3d array
+
+NOTE: shape attribute makes permanent changes to the shape of the ndarray_obj
+
+2. By using reshape() method:
+-----------------------------
+Syntax: 
+	1. ndarray_obj = ndarray_obj.reshape(value) #for 1D array
+	2. ndarray_obj = ndarray_obj.reshape(row, column) #for 2D array
+	3. ndarray_obj = ndarray_obj.reshape(matrices, rows, cols) #for 3D array
+
+NOTE: reshape() method does not make permanent changes to the ndarray_object. In order to make permanent changes, we need to reinitialize the ndarray_object/variable
